@@ -10,7 +10,7 @@
         <!--Posts-->
         <scene sceneID="M5d-qw-KNX">
             <objects>
-                <tableViewController id="Sah-nr-R90" sceneMemberID="viewController">
+                <tableViewController id="Sah-nr-R90" customClass="PostsViewController" customModule="TTI_Coding_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="B8T-Qh-ziY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="post_cell" rowHeight="80" id="0QG-Y3-L8M">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="post_cell" rowHeight="80" id="0QG-Y3-L8M" customClass="PostTableViewCell" customModule="TTI_Coding_Challenge" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0QG-Y3-L8M" id="wRa-Tg-fWA">
@@ -34,6 +34,7 @@
                                             <rect key="frame" x="16" y="11" width="58" height="58"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="9fQ-wC-CC3" secondAttribute="height" multiplier="1:1" id="Stc-sx-Kyk"/>
+                                                <constraint firstAttribute="width" constant="58" id="sY5-qV-VDq"/>
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="5vk-dN-qBz">
@@ -65,6 +66,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="subtitleLabel" destination="hsh-3m-kFf" id="JRT-7b-rGZ"/>
+                                    <outlet property="thumbnailView" destination="9fQ-wC-CC3" id="8ky-Qi-GlZ"/>
+                                    <outlet property="titleLabel" destination="koV-hC-Kz0" id="mkA-T0-bIb"/>
                                     <segue destination="Ngh-pW-ceb" kind="show" id="2to-FJ-tCO"/>
                                 </connections>
                             </tableViewCell>
@@ -75,8 +79,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Posts" id="fvr-3G-HOr">
-                        <barButtonItem key="rightBarButtonItem" title="Best" id="xcA-uD-tAh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Best" id="xcA-uD-tAh">
+                            <connections>
+                                <action selector="sortButtonTapped:" destination="Sah-nr-R90" id="41h-P3-slR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="sortButton" destination="xcA-uD-tAh" id="NWx-6T-omI"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9A-EN-XE4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,7 +96,7 @@
         <!--Comments-->
         <scene sceneID="hJ4-hp-Y1O">
             <objects>
-                <tableViewController id="Ngh-pW-ceb" sceneMemberID="viewController">
+                <tableViewController id="Ngh-pW-ceb" customClass="CommentsViewController" customModule="TTI_Coding_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="VYU-DR-p7r">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,6 +140,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Comments" id="0vT-yG-knN"/>
+                    <connections>
+                        <outlet property="loadingLabel" destination="hm6-nS-P7t" id="vhc-T6-mgo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3f2-ft-vOk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
