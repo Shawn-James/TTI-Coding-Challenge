@@ -56,15 +56,63 @@
 		1DF6732F29A311C900F1E56E /* TTI-Coding-Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				1DF6733029A311C900F1E56E /* AppDelegate.swift */,
-				1DF6733229A311C900F1E56E /* SceneDelegate.swift */,
-				1DF6733429A311C900F1E56E /* ViewController.swift */,
-				1DF6733629A311C900F1E56E /* Main.storyboard */,
-				1DF6733929A311CB00F1E56E /* Assets.xcassets */,
-				1DF6733B29A311CB00F1E56E /* LaunchScreen.storyboard */,
 				1DF6733E29A311CB00F1E56E /* Info.plist */,
+				1DF6734429A313C000F1E56E /* Views */,
+				1DF6734529A313ED00F1E56E /* ViewModels */,
+				1DF6734629A313F400F1E56E /* Models */,
+				1DF6734729A313FB00F1E56E /* Services */,
+				1DF6734829A3140E00F1E56E /* Utilities */,
+				1DF6734929A3141900F1E56E /* Supporting Files */,
 			);
 			path = "TTI-Coding-Challenge";
+			sourceTree = "<group>";
+		};
+		1DF6734429A313C000F1E56E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1DF6733429A311C900F1E56E /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1DF6734529A313ED00F1E56E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1DF6734629A313F400F1E56E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1DF6734729A313FB00F1E56E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1DF6734829A3140E00F1E56E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1DF6734929A3141900F1E56E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DF6733B29A311CB00F1E56E /* LaunchScreen.storyboard */,
+				1DF6733629A311C900F1E56E /* Main.storyboard */,
+				1DF6733029A311C900F1E56E /* AppDelegate.swift */,
+				1DF6733229A311C900F1E56E /* SceneDelegate.swift */,
+				1DF6733929A311CB00F1E56E /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,11 +337,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "TTI-Coding-Challenge/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Challenge;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,11 +364,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "TTI-Coding-Challenge/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Challenge;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
